@@ -1,0 +1,19 @@
+### Protocol file for Project model
+### Maps to your existing Flutter Project model
+
+class: Project
+table: projects
+fields:
+  name: String
+  roomType: String
+  style: String
+  imagePath: String?
+  estimatedCost: double
+  status: ProjectStatus
+  userId: int
+  createdAt: DateTime
+  updatedAt: DateTime
+
+indexes:
+  project_user_idx:
+    fields: userId

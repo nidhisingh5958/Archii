@@ -1,0 +1,10 @@
+### Protocol file for Furniture Item
+
+class: FurnitureItem
+fields:
+  name: String
+  type: String
+  position: String
+  dimensions: String?
+  estimatedCost: double?
+  notes: String?

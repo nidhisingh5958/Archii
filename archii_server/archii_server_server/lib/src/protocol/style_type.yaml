@@ -1,0 +1,10 @@
+### Enum for Design Style Types
+
+enum: StyleType
+values:
+  - modern
+  - traditional
+  - minimalist
+  - industrial
+  - scandinavian
+  - bohemian

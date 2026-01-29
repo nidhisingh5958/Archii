@@ -1,0 +1,8 @@
+### Enum for Budget Levels
+
+enum: BudgetLevel
+values:
+  - low
+  - medium
+  - high
+  - luxury

@@ -1,0 +1,8 @@
+### Enum for Project Status
+
+enum: ProjectStatus
+values:
+  - draft
+  - processing
+  - completed
+  - archived

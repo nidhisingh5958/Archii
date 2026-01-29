@@ -1,0 +1,13 @@
+### Protocol file for Design Request
+### Used for AI design generation requests
+
+class: DesignRequest
+fields:
+  length: double
+  width: double
+  height: double
+  style: StyleType
+  budget: BudgetLevel
+  roomType: RoomType?
+  specialRequirements: String?
+  imageBase64: String?

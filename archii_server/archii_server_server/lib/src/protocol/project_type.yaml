@@ -1,0 +1,17 @@
+### Enum for Large Scale Project Types
+
+enum: ProjectType
+values:
+  - residentialRoom
+  - residentialBuilding
+  - township
+  - university
+  - hospital
+  - hotel
+  - resort
+  - governmentBuilding
+  - farmhouse
+  - commercialComplex
+  - industrialComplex
+  - sector
+  - society

@@ -1,0 +1,9 @@
+### Enum for Project Scale
+
+enum: ProjectScale
+values:
+  - room
+  - building
+  - complex
+  - township
+  - city

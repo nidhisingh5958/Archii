@@ -41,11 +41,16 @@ dependencies:
   # Google fonts
   google_fonts: ^6.1.0
   
-  # HTTP client
-  http: ^1.2.0
-  
   # State management
   provider: ^6.1.1
+  
+  # Serverpod client
+  serverpod_flutter: ^3.2.3
+  serverpod_auth_idp_client: ^3.2.3
+  
+  # Archii server client (local path)
+  archii_server_client:
+    path: ../archii_server/archii_server_client
 
 dev_dependencies:
   flutter_test:

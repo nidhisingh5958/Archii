@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'screens/splash_screen.dart';
+import 'services/server_connection.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Serverpod connection
+  await serverConnection.initialize();
+
   runApp(const ArchiiApp());
 }
 

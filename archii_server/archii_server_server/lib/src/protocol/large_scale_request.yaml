@@ -1,0 +1,13 @@
+### Protocol file for Large Scale Project Request
+### For township, complex, building projects
+
+class: LargeScaleRequest
+fields:
+  projectType: ProjectType
+  scale: ProjectScale
+  areaAcres: double
+  budgetRange: String
+  locationType: String
+  specialRequirements: String?
+  sustainabilityLevel: String?
+  targetCapacity: int?

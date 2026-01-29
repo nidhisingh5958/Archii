@@ -1,0 +1,18 @@
+### Protocol file for Chat Message
+### For real-time AI chat communication
+
+class: ChatMessage
+table: chat_messages
+fields:
+  projectId: int?
+  userId: int
+  content: String
+  isFromUser: bool
+  timestamp: DateTime
+  metadata: Map<String, String>?
+
+indexes:
+  chat_project_idx:
+    fields: projectId
+  chat_user_idx:
+    fields: userId

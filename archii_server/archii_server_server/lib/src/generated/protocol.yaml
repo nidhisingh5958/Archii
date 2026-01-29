@@ -1,0 +1,36 @@
+emailIdp:
+  - login:
+  - startRegistration:
+  - verifyRegistrationCode:
+  - finishRegistration:
+  - startPasswordReset:
+  - verifyPasswordResetCode:
+  - finishPasswordReset:
+jwtRefresh:
+  - refreshAccessToken:
+chat:
+  - saveMessage:
+  - getProjectChatHistory:
+  - getUserChatHistory:
+  - clearProjectChatHistory:
+design:
+  - analyzeRoom:
+  - generateDesignPlan:
+  - fullDesignPipeline:
+  - generateVisual:
+largeScale:
+  - generateMasterPlan:
+  - generateConstructionStrategy:
+  - getArchitecturalConcepts:
+  - getEnvironmentalAssessment:
+  - completeLargeScalePlanning:
+project:
+  - createProject:
+  - getUserProjects:
+  - getProject:
+  - updateProject:
+  - deleteProject:
+  - updateProjectStatus:
+  - getProjectsByStatus:
+greeting:
+  - hello:

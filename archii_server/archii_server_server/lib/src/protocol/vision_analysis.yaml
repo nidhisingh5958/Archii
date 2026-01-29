@@ -1,0 +1,13 @@
+### Protocol file for Vision Analysis
+### Result from analyzing room images
+
+class: VisionAnalysis
+fields:
+  roomType: String
+  wallColors: String
+  windows: String
+  doors: String
+  existingFurniture: List<String>
+  lightingCondition: String
+  freeSpaceWalls: String
+  structuralLimitations: String

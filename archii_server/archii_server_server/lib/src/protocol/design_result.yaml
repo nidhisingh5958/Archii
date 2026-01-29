@@ -1,0 +1,14 @@
+### Protocol file for Design Result
+### Response from AI design generation
+
+class: DesignResult
+fields:
+  roomLayoutStrategy: String
+  furniturePlacement: List<FurnitureItem>
+  lightingDesign: String
+  colorPalette: List<String>
+  materialsSuggestions: List<String>
+  spaceOptimization: String
+  budgetBreakdown: Map<String, String>
+  reasoning: String
+  generatedImageUrl: String?

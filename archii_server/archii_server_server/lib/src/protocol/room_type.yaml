@@ -1,0 +1,10 @@
+### Enum for Room Types
+
+enum: RoomType
+values:
+  - bedroom
+  - livingRoom
+  - kitchen
+  - bathroom
+  - office
+  - diningRoom
