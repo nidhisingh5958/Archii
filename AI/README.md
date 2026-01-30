@@ -2,6 +2,8 @@
 
 A production-structured AI backend system for architectural, interior design, and construction planning using Google Gemini models.
 
+> **Part of the Archii Project** - See [main README](../README.md) for full project overview.
+
 ## 🚀 Features
 
 - **Vision Analysis**: Analyze room images using Gemini Pro vision capabilities
@@ -14,10 +16,30 @@ A production-structured AI backend system for architectural, interior design, an
 - **🌱 Environmental Assessment**: Sustainability and environmental impact analysis
 - **🎯 Multi-Scale Architecture**: From rooms to cities - complete planning solution
 
+## 🔷 Integration with Serverpod
+
+This AI service is designed to work with the Serverpod backend. The Serverpod server acts as a proxy, handling:
+
+- User authentication
+- Project management
+- Database operations
+- Request routing to this AI service
+
+```
+Flutter App → Serverpod (port 8080) → This AI Service (port 8000)
+```
+
+### Configuration
+
+Set the AI service URL in Serverpod:
+```bash
+export AI_SERVICE_URL=http://localhost:8000
+```
+
 ## 🧩 System Architecture
 
 ```
-Flutter App → FastAPI Backend → Gemini AI
+Flutter App → Serverpod → FastAPI Backend → Gemini AI
 
 Backend Modules:
 ├── Design LLM Brain (Gemini 1.5 Pro)
@@ -30,53 +52,86 @@ Backend Modules:
 ## 📁 Project Structure
 
 ```
-app/
-├── main.py                 # FastAPI application
-├── routes/
-│   └── design_routes.py    # API endpoints
-├── services/
-│   ├── gemini_service.py   # Core Gemini integration
-│   ├── vision_service.py   # Image analysis
-│   ├── design_service.py   # AI design brain
-│   ├── image_service.py    # Visualization generation
-│   └── layout_engine.py    # Spatial reasoning
-├── models/
-│   └── schemas.py          # Pydantic models
-└── utils/
-    └── logging_config.py   # Logging setup
+AI/
+├── run_server.py              # Server entry point
+├── requirements.txt           # Python dependencies
+├── .env                       # Environment variables (create this)
+└── app/
+    ├── __init__.py
+    ├── main.py                # FastAPI application
+    ├── routes/
+    │   ├── __init__.py
+    │   ├── design_routes.py   # Design API endpoints
+    │   └── advanced_routes.py # Large-scale planning endpoints
+    ├── services/
+    │   ├── __init__.py
+    │   ├── gemini_service.py  # Core Gemini integration
+    │   ├── vision_service.py  # Image analysis
+    │   ├── design_service.py  # AI design brain
+    │   ├── image_service.py   # Visualization generation
+    │   ├── layout_engine.py   # Spatial reasoning
+    │   ├── master_planning_service.py
+    │   └── construction_planning_service.py
+    ├── models/
+    │   ├── __init__.py
+    │   └── schemas.py         # Pydantic models
+    └── utils/
+        ├── __init__.py
+        └── logging_config.py  # Logging setup
 ```
 
 ## 🛠️ Installation
 
-1. **Clone and navigate to project**:
-   ```bash
-   cd flutter_construction_app_ai_project
-   ```
+### 1. Create Virtual Environment
 
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+cd AI
+python -m venv venv
 
-3. **Configure environment**:
-   ```bash
-   # Edit .env file
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
+# Activate (macOS/Linux)
+source venv/bin/activate
 
-4. **Run the server**:
-   ```bash
-   python run_server.py
-   ```
+# Activate (Windows)
+venv\Scripts\activate
+```
+
+### 2. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure Environment
+
+Create a `.env` file:
+```bash
+# .env
+GEMINI_API_KEY=your_gemini_api_key_here
+```
+
+Or export directly:
+```bash
+export GEMINI_API_KEY="your_gemini_api_key_here"
+```
+
+### 4. Run the Server
+
+```bash
+python run_server.py
+```
+
+The server will start at `http://localhost:8000`
 
 ## 🔗 API Endpoints
 
 ### Core Endpoints
 
-- `POST /api/v1/analyze-room` - Analyze room image
-- `POST /api/v1/design-plan` - Generate design plan
-- `POST /api/v1/generate-visual` - Create visualization
-- `POST /api/v1/full-design-pipeline` - Complete AI pipeline
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/v1/analyze-room` | POST | Analyze room image |
+| `/api/v1/design-plan` | POST | Generate design plan |
+| `/api/v1/generate-visual` | POST | Create visualization |
+| `/api/v1/full-design-pipeline` | POST | Complete AI pipeline |
 
 ### 🏙️ Advanced Large-Scale Planning
 
