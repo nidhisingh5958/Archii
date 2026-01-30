@@ -1,8 +1,4 @@
-<p align="center">
-  <img src="docs/assets/archii-logo.png" alt="Archii Logo" width="200"/>
-</p>
-
-<h1 align="center">🏛️ Archii</h1>
+<h1 align="center">Archii</h1>
 
 <p align="center">
   <strong>AI Architectural Design Copilot</strong><br>
